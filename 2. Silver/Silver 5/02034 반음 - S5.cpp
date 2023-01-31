@@ -50,18 +50,6 @@ class heap : public priority_queue<T, vector<T>, greater<T>>
 {
 };
 
-typedef	int int_K;
-typedef float float1;
-typedef double float2;
-typedef int int2;
-typedef int int3;
-
-#define makeValue(t, k, n)	\
-void func(t##k n)			\
-{							\
-	printf("%f", n);		\
-}							\
-
 int main()
 {
 	FastIO;
