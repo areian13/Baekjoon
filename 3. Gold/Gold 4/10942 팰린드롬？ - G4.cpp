@@ -52,13 +52,13 @@ class heap : public priority_queue<T, vector<T>, greater<T>>
 
 bool IsPalin(int s, int e, vector<int>& num, vector<vector<bool>>& dp)
 {
-	if (dp[s][e])
-		return dp[s][e];
+	if (dp[s][e] == true)
+		return true;
 
 	if (s == e || s + 1 == e)
-		return (num[s] == num[e]);
+		return dp[s][e] = (num[s] == num[e]);
 
-	return dp[s][e] = IsPalin(s + 1, e - 1, num, dp);
+	return dp[s][e] = ((num[s] == num[e]) && IsPalin(s + 1, e - 1, num, dp));
 }
 
 int main()
