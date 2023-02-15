@@ -112,10 +112,12 @@ int main()
 
 	while (tc--)
 	{
+		Init();
+
 		int n, m;
 		Cin n >> m;
 
-		edge.resize(n + 1, vector<int>(0));
+		edge.resize(n + 1);
 		For(m)
 		{
 			int x, y;
@@ -149,7 +151,5 @@ int main()
 		For(cntSCC)
 			result += (indegree[i] == 0);
 		Cout result Endl;
-
-		Init();
 	}
 }
