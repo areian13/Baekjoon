@@ -89,17 +89,20 @@ int DFS(int cur)
 
 	if (result == nthDFS[cur])
 	{
+		vector<int> curSCC;
 		while (true)
 		{
 			int top = S.top();
 			S.pop();
 
+			curSCC.push_back(top);
 			isFinished[top] = true;
 			nthSCC[top] = cntSCC;
 			if (top == cur)
 				break;
 		}
 		cntSCC++;
+		SCC.push_back(curSCC);
 	}
 	return result;
 }
@@ -134,7 +137,6 @@ int main()
 		nthSCC.resize(n + 1, 0);
 		isFinished.resize(n + 1, false);
 
-
 		Foro(n)
 		{
 			if (nthDFS[i] == 0)
@@ -151,9 +153,19 @@ int main()
 			}
 		}
 
-		int result = 0;
+		vector<int> result;
 		For(cntSCC)
-			result += (outdegree[i] == 0);
-		Cout result Endl;
+		{
+			if (outdegree[i] == 0)
+			{
+				for (int node : SCC[i])
+					result.push_back(node);
+			}
+		}
+		sort(stoe(result));
+
+		for (int node : result)
+			Cout node fspc;
+		Enter;
 	}
 }
