@@ -94,5 +94,5 @@ int main()
 			break;
 		}
 	}
-	Cout result Endl; 
+	Cout result Endl;
 }
