@@ -140,7 +140,7 @@ int main()
 				DFS(i);
 		}
 
-		vector<int> indegree(n, 0);
+		vector<int> indegree(cntSCC, 0);
 		For(n)
 		{
 			for (int nxt : edge[i])
