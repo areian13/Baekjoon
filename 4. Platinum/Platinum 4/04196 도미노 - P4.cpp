@@ -137,7 +137,7 @@ int main()
 				DFS(i);
 		}
 
-		vector<int> indegree(n + 1, 0);
+		vector<int> indegree(cntSCC, 0);
 		Foro(n)
 		{
 			for (int nxt : edge[i])
