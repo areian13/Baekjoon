@@ -69,7 +69,6 @@ int CCW(Point a, Point b, Point c)
 	elif(result < 0)
 		return -1;
 	return 0;
-
 }
 
 int main()
