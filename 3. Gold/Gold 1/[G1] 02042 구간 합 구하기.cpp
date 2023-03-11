@@ -56,6 +56,7 @@ LLONG Sum(LLONG l, LLONG r, LLONG nodeNum, LLONG nodeL, LLONG nodeR, vector<LLON
 	LLONG mid = (nodeL + nodeR) / 2;
 	return Sum(l, r, 2 * nodeNum, nodeL, mid, arr) + Sum(l, r, 2 * nodeNum + 1, mid + 1, nodeR, arr);
 }
+
 int main()
 {
 	FastIO;
