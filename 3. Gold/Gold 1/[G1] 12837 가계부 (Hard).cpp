@@ -70,7 +70,7 @@ int main()
 	int n, m;
 	Cin n >> m;
 
-	int r = log2(2 * n - 1) ;
+	int r = log2(2 * n - 1);
 	int size = pow(2, r);
 
 	vector<LLONG> arr(2 * size, 0);
